@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('path/head.html',{title: "Главная"})
+  <body>
+    <div class="wrapper">
+      @@include('path/header.html',{})
+      <main class="page">
+        <h1>Привет</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit
+        </p>
+      </main>
+      @@loop('path/news-item.html', '../../data/news.json')
+      @@include('path/footer.html',{})
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

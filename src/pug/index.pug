@@ -1,0 +1,11 @@
+extends layout/app
+block page 
+  include path/header
+  h1.title Главная
+  //- img(src="@img/tessa.jpg", alt="ЗСУ", width="500")
+  ul.news
+    each item in news
+      li.title=item.name
+      li=item.body
+
+  include path/footer
